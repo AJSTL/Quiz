@@ -4,25 +4,37 @@ using System.Text;
 
 namespace Quiz
 {
-    class Quiz
+    public class Quiz
     {
-        public List<Question> Questions { get; set; } = new List<Question>();
+        private List<Question> questions = new List<Question>();
 
-        public void AddQuestion(Question question)
+        // to add questions and answers for the quiz
+        public void Add(Question questionText)
         {
-            Console.WriteLine("Add a new question to the quiz here: ");
-            Questions.Add(question);
-
+            questions.Add(questionText);
         }
-
-        public void PrintQuiz()
+        public void Run()
         {
-
+            Console.WriteLine("Quiz Time!");
+            // iterate through questions and call the override display method for each
+            foreach (Question q in questions)
+                q.Display();
         }
-
-        public void GradeQuiz()
+        public void Grade()
         {
+            // iterate for each correct answer 
+            int correctAnswers = 0;
+            foreach (Question q in questions)
+                if (q.IsCorrect())
+                    correctAnswers++;
+            
+            // calculate the percentage
+            double grade = (Convert.ToDouble(correctAnswers) / Convert.ToDouble(questions.Count)) * 100;
+
+            // write the number of correct answers out of total questions and the percentage rounded to 2 decimals
+            Console.WriteLine(correctAnswers + " correct answers out of " + questions.Count + " = " + Math.Round(grade,2) + "%");
 
         }
     }
+   
 }

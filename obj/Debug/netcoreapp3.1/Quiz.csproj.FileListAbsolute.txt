@@ -1,0 +1,11 @@
+C:\LaunchCode\Quiz\obj\Debug\netcoreapp3.1\Quiz.csprojAssemblyReference.cache
+C:\LaunchCode\Quiz\obj\Debug\netcoreapp3.1\Quiz.AssemblyInfoInputs.cache
+C:\LaunchCode\Quiz\obj\Debug\netcoreapp3.1\Quiz.AssemblyInfo.cs
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.exe
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.deps.json
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.runtimeconfig.json
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.runtimeconfig.dev.json
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.dll
+C:\LaunchCode\Quiz\bin\Debug\netcoreapp3.1\`.pdb
+C:\LaunchCode\Quiz\obj\Debug\netcoreapp3.1\`.dll
+C:\LaunchCode\Quiz\obj\Debug\netcoreapp3.1\`.pdb

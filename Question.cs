@@ -1,27 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Quiz
 {
-    public class Question
+    // define parent class Question
+    public abstract class Question
     {
+        // to give each quiz question a unique identifier and for iterating through them
+        private static int questionNumber = 1;
+        internal int QuestionNumber { get; set; }
         public string QuestionText { get; set; }
-        public enum AnswerTypes { CheckBox, MultiChoice, TrueFalse }
-        public AnswerTypes AnswerType { get; set; }
+        internal virtual string Answer { get; set; }
+        internal virtual string UserInput { get; set; }
 
-        public Question(string questionText, AnswerTypes answerType)
+        public Question(string questionText)
         {
+            QuestionNumber = questionNumber++;
             QuestionText = questionText;
-            AnswerType = answerType;
 
         }
-
-        public void PrintQuestion(Question question) 
+        public virtual void Display()
         {
-            Console.WriteLine(question.QuestionText);
+            // print the question text
+            Console.WriteLine(QuestionText);
+            
+            // collect user input 
+            string input = Console.ReadLine();
+            UserInput = input;
         }
-
+        public virtual bool IsCorrect()
+        {
+            if (UserInput == Answer)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 
